@@ -1,7 +1,5 @@
 package com.craftinginterpreters.tool;
 
-import javafx.print.Printer;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
