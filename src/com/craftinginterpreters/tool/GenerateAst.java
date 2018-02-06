@@ -41,7 +41,7 @@ public class GenerateAst {
 
         // The base accept() method.
         writer.println("");
-        writer.println("    abstract <R> accept(Visitor<R> visitor);");
+        writer.println("    abstract <R> R accept(Visitor<R> visitor);");
 
         writer.println("}");
         writer.close();
@@ -69,7 +69,7 @@ public class GenerateAst {
         String[] fields = fieldList.split(", ");
         for (String field : fields) {
             String name = field.split(" ")[1];
-            writer.println("        this." + name + " = " + name + ";");
+            writer.println("            this." + name + " = " + name + ";");
         }
 
         writer.println("        }");
@@ -86,6 +86,6 @@ public class GenerateAst {
             writer.println("        final " + field + ";");
         }
 
-        writer.println("  }");
+        writer.println("    }");
     }
 }
